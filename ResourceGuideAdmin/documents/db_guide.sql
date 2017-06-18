@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-06-18 10:34:24
+Date: 2017-06-19 01:27:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -417,9 +417,9 @@ CREATE TABLE `t_system` (
 -- ----------------------------
 DROP TABLE IF EXISTS `t_user`;
 CREATE TABLE `t_user` (
-  `id` varchar(20) NOT NULL,
-  `username` varchar(20) NOT NULL,
-  `PASSWORD` varchar(20) DEFAULT NULL,
+  `id` varchar(200) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `PASSWORD` varchar(200) DEFAULT NULL,
   `qq` varchar(20) DEFAULT NULL,
   `weixin` varchar(20) DEFAULT NULL,
   `telephone` int(11) DEFAULT NULL,
@@ -432,14 +432,15 @@ CREATE TABLE `t_user` (
   `sex` varchar(2) DEFAULT NULL,
   `alias` varchar(20) DEFAULT NULL,
   `score` int(11) DEFAULT NULL,
+  `islock` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
-INSERT INTO `t_user` VALUES ('1', 'root', 'root', '1111', '222', '3333', '4444', '555', '0', '2017-06-17 23:25:30', '127.2.2.2', '小强', '男', 'x先生', '1000');
-INSERT INTO `t_user` VALUES ('2', 'ww', 'ww', null, null, null, null, null, null, '2017-06-18 10:31:51', null, null, null, null, null);
+INSERT INTO `t_user` VALUES ('1', 'root', 'b1ba853525d0f30afe59d2d005aad96c', '1111', '222', '3333', '4444', '555', '0', '2017-06-19 00:35:31', '127.2.2.2', '小强', '男', 'x先生', '1000', null);
+INSERT INTO `t_user` VALUES ('2', 'ww', 'b1ba853525d0f30afe59d2d005aad96c', null, null, null, null, null, null, '2017-06-19 00:35:36', null, null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for t_userrole
