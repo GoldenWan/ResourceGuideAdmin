@@ -10,5 +10,6 @@ import cn.resource.guide.entity.User;
 public interface RegisterMapper {
 
 	public  int register(User user);
+	public  int userRole(String id);
 	
 }

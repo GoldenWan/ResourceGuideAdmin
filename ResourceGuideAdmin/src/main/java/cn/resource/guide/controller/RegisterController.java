@@ -29,7 +29,8 @@ public class RegisterController {
     public  @ResponseBody Map add(HttpServletRequest req,User user) {
 
 		User u=new User();
-		u.setId(UUIDGenerator.getUUID());
+		String uid=UUIDGenerator.getUUID();
+		u.setId(uid);
 		u.setUsername(user.getUsername());
 		
 		String hashAlgorithmName = "MD5";//算法名
@@ -59,13 +60,13 @@ public class RegisterController {
 		u.setIslock(0);
 		
 		Map map=new HashMap();
-		int i=registerService.register(u);
-		if(i>0){
-			 map.put("msg","注册成功！");
-		}else{
-			 map.put("msg","注册失败！");
-		}
-	    return map;
+		registerService.register(u);//存入t_user
+		registerService.userRole(uid);//同步存入t_userrole
+	
+		map.put("msg","注册成功！");
+		
+		return map;
+		
     }
 	
 	

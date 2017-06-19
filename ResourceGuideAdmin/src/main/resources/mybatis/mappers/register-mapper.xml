@@ -12,4 +12,9 @@
 	                  #{email},#{state},#{registertime},#{registerip},#{realname},
 	                  #{sex},#{alias},#{score},#{islock})
     </insert>
+    <insert id="userRole" parameterType="String">
+          insert into t_userrole(userid)
+            select u.id
+            from t_user u  where u.id=#{id}
+    </insert>
 </mapper>
