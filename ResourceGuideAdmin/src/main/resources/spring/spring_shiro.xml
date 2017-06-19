@@ -93,7 +93,7 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
     <bean id="filterChainDefinitionMapBuilder"
     	class="cn.resource.guide.factory.FilterChainDefinitionMapBuilder"></bean>
     
-    <bean id="shiroService"
+   <bean id="shiroService"
     	class="cn.resource.guide.services.ShiroService"></bean>
     
 </beans>
