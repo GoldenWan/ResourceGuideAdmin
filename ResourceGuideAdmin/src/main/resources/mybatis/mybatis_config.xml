@@ -8,6 +8,9 @@
 	<!-- 所有model和与数据表映射对应关系配置 -->
 	 <typeAliases>
 		<typeAlias alias="user" type="cn.resource.guide.entity.User"/>
+		<typeAlias alias="role" type="cn.resource.guide.entity.Role"/>
+		<typeAlias alias="function" type="cn.resource.guide.entity.Function"/>
+	
 	</typeAliases> 
 
 	<!-- 配置数据源相关的信息 -->

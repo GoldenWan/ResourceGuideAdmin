@@ -7,9 +7,8 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import cn.resource.guide.controller.Function;
+import cn.resource.guide.entity.Function;
 import cn.resource.guide.entity.Role;
 import cn.resource.guide.entity.User;
 import cn.resource.guide.mapper.LoginMapper;
@@ -20,7 +19,7 @@ public class ShiroService {
 	LoginMapper loginMapper;
 	
 	
-	@RequiresRoles({"admin"})
+	@RequiresRoles({"1"})
 	public void testMethod(){
 		System.out.println("testMethod, time: " + new Date());
 		
@@ -41,6 +40,7 @@ public class ShiroService {
 
 	public List<Function> getPermissionByUserId(String id) {
 		return loginMapper.getPermissionByUserId(id);
+		
 	}
 	
 }

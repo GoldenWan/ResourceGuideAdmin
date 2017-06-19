@@ -18,13 +18,10 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.apache.shiro.session.InvalidSessionException;
-import org.apache.shiro.session.Session;
 
-import cn.resource.guide.controller.Function;
+import cn.resource.guide.entity.Function;
 import cn.resource.guide.entity.Role;
 //import cn.resource.guide.controller.LoginController;
 import cn.resource.guide.entity.User;
@@ -101,6 +98,7 @@ public class ShiroRealm extends AuthorizingRealm {
 			for (Role role : roleList) {
 				if (role.getName() != null) {
 					// 添加角色
+					logger.info("role.getName():"+role.getName());
 					simpleAuthorInfo.addRole(role.getName());
 				}
 			}
@@ -109,6 +107,8 @@ public class ShiroRealm extends AuthorizingRealm {
 		if (permList != null && permList.size() > 0) {
 			for (Function perm : permList) {
 				if (perm.getName() != null) {
+					logger.info("perm.getName():"+perm.getName());
+
 					// 添加权限
 					simpleAuthorInfo.addStringPermission(perm.getName());
 				}

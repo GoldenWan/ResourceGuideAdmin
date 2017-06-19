@@ -1,5 +1,7 @@
 package cn.resource.guide.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
@@ -20,7 +22,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import cn.resource.guide.entity.Function;
 import cn.resource.guide.entity.Json;
+import cn.resource.guide.entity.Role;
 import cn.resource.guide.entity.User;
 import cn.resource.guide.services.ShiroService;
 import cn.resource.guide.utils.ConstValues;
@@ -108,8 +112,28 @@ public class LoginController {
     @ResponseBody  
     @RequestMapping("json")  
     public String content(HttpServletRequest request){  
-        return "{\"hello\":\"wellcome content\"}";  
-        
-    }  
+    	 User user =shiroService.getUserByName("root");
+    	List<Role> roleList = shiroService.getRoleByUserId(user.getId());
+		// 操作
+		List<Function> permList = shiroService.getPermissionByUserId(user.getId());
+		logger.info(roleList.size()+"---"+permList.size());
+		if (roleList != null && roleList.size() > 0) {
+			for (Role role : roleList) {
+				if (role.getName() != null) {
+					// 添加角色
+					logger.info("role.getName():"+role.getName()+role.getId());
+				}
+			}
+		}
+
+		if (permList != null && permList.size() > 0) {
+			for (Function perm : permList) {
+				if (perm.getName() != null) {
+					logger.info("perm.getName():"+perm.getName()+perm.getId());
+				}
+			}
+       } 
+		return "{\"hello\":\"wellcome content\"}";  
+		}
     
 }

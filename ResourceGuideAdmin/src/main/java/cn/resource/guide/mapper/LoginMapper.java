@@ -5,7 +5,7 @@ import java.util.List;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.stereotype.Component;
 
-import cn.resource.guide.controller.Function;
+import cn.resource.guide.entity.Function;
 import cn.resource.guide.entity.Role;
 import cn.resource.guide.entity.User;
 

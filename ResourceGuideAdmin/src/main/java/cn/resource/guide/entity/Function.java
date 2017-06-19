@@ -1,4 +1,4 @@
-package cn.resource.guide.controller;
+package cn.resource.guide.entity;
 
 public class Function {
 	int id;
@@ -36,4 +36,10 @@ public class Function {
 	public void setSubmittime(String submittime) {
 		this.submittime = submittime;
 	}
+	@Override
+	public String toString() {
+		return "Function [id=" + id + ", name=" + name + ", remark=" + remark + ", state=" + state + ", submittime="
+				+ submittime + "]";
+	}
+
 }
