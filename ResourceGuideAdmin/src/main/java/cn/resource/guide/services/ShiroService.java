@@ -35,11 +35,11 @@ public class ShiroService {
 		return loginMapper.getUserByName(username);
 	}
 
-	public List<Role> getRoleByUserId(int id) {
+	public List<Role> getRoleByUserId(String id) {
 		return loginMapper.getRoleByUserId(id);
 	}
 
-	public List<Function> getPermissionByUserId(int id) {
+	public List<Function> getPermissionByUserId(String id) {
 		return loginMapper.getPermissionByUserId(id);
 	}
 	

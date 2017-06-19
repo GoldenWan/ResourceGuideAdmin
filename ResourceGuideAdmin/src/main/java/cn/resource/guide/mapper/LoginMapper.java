@@ -15,9 +15,9 @@ public interface LoginMapper {
 
 	User getUserByName(String username);
 
-	List<Role> getRoleByUserId(int id);
+	List<Role> getRoleByUserId(String id);
 
-	List<Function> getPermissionByUserId(int id);
+	List<Function> getPermissionByUserId(String id);
 
 	
 }
