@@ -16,7 +16,7 @@ public class User {
 	String sex;
 	String alias;//网名
 	int score;//积分
-	int islock;
+	int islock;//账号锁定
 	
 	
 	public String getId() {

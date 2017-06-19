@@ -9,7 +9,7 @@ import cn.resource.guide.entity.User;
 @Component
 public interface RegisterMapper {
 
-	public  int register(User user);
+	public  int register(User user);//注册
 	public  int userRole(String id);
 	
 }

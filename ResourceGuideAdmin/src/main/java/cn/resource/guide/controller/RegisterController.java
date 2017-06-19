@@ -33,7 +33,7 @@ public class RegisterController {
 		u.setId(uid);
 		u.setUsername(user.getUsername());
 		
-		String hashAlgorithmName = "MD5";//算法名
+		String hashAlgorithmName = "MD5";//算法名md5
 		Object credentials = user.getPassword();
 		Object salt = ByteSource.Util.bytes(user.getUsername());;
 		int hashIterations = 1024;
