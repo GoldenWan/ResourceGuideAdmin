@@ -26,6 +26,8 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 	<!-- 导入 spring mybatis 配置文件 -->
 	<import resource="classpath:spring/spring_mybatis.xml" />
-	
+	<!-- 导入 spring shiro 配置文件 -->
+	<import resource="classpath:spring/spring_shiro.xml" />
+    
 </beans>
 
