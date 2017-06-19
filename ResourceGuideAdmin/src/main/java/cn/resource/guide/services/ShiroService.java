@@ -6,13 +6,19 @@ import java.util.List;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.session.Session;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import cn.resource.guide.controller.Function;
 import cn.resource.guide.entity.Role;
 import cn.resource.guide.entity.User;
+import cn.resource.guide.mapper.LoginMapper;
 
 
 public class ShiroService {
+	@Autowired
+	LoginMapper loginMapper;
+	
 	
 	@RequiresRoles({"admin"})
 	public void testMethod(){
@@ -25,18 +31,16 @@ public class ShiroService {
 	}
 
 	public User getUserByName(String username) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return loginMapper.getUserByName(username);
 	}
 
-	public List<Role> selectRoleByUserId(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Role> getRoleByUserId(int id) {
+		return loginMapper.getRoleByUserId(id);
 	}
 
-	public List<Function> selectPermissionByUserId(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Function> getPermissionByUserId(int id) {
+		return loginMapper.getPermissionByUserId(id);
 	}
 	
 }
