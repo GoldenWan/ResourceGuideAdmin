@@ -2,7 +2,7 @@ package cn.resource.guide.entity;
 
 public class User {
 	String id;
-	String username;
+	String username;//账号
 	String password;
 	String qq;
 	String weixin;
@@ -14,8 +14,8 @@ public class User {
 	String registerip;
 	String realname;
 	String sex;
-	String alias;
-	int score;
+	String alias;//网名
+	int score;//积分
 	int islock;
 	
 	

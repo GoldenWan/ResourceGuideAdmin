@@ -39,9 +39,10 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
 		<property name="configLocation" value="classpath:mybatis/mybatis_config.xml"/>
 	</bean>
 
+    
 	<!-- DAO接口所在包名，Spring会自动查找其下的类 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="cn.resource.guide.dao" />
+		<property name="basePackage" value="cn.resource.guide.mapper" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	</bean>
 

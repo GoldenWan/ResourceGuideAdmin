@@ -1,0 +1,363 @@
+body, html{
+    height: 100%;
+}
+body {
+    margin: 0;
+    font: 14px/1.5em "Microsoft YaHei";
+    color: #333;
+}
+input{
+    outline: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.required, textarea.required {
+    background: url(../img/wrest.gif) #fff top right no-repeat !important;
+}
+ul, ol{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+select {
+    padding: 7px 10px;
+    border: 1px solid #e4eaec;
+}
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+}
+select {
+    margin: 0;
+    padding: 7px 10px;
+    border: 1px solid #e4eaec;
+}
+textarea, select {
+    font-size: 1em;
+}
+label, input, button, select, img {
+    vertical-align: middle;
+}
+keygen, select {
+    border-radius: 5px;
+}
+.container {
+    width: 1190px;
+    margin: 20px auto;
+}
+
+.header image {
+    float: left;
+}
+
+.header .search {
+    padding-top: 25px;
+    width: 550px;
+    float: right;
+}
+
+.header .info_m {
+    float: right;
+}
+
+.header .search input {
+    width: 356px;
+    height: 29px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+.header .search input[type=text]{
+    padding-left: 10px;
+}
+.header .search span a {
+    font-size: 14px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+#keyword {
+    margin: 0;
+    padding: 0;
+}
+
+#keyword li {
+    list-style: none;
+    float: left;
+    margin: 5px;
+}
+
+.clearfixed:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*表格*/
+.tbl_frm .tb_info{
+    margin-top: 20px;
+}
+.tbl_frm table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.tbl_frm01 .tbl_wrap{
+    margin-bottom: 30px;
+}
+.tbl_frm th {
+    width: 200px;
+    font-size: 12px;
+    padding: 14px 13px;
+    background-color: #f9f9f9;
+    border: 1px solid #b8c9c2;
+    border-left: 0;
+    text-align: center;
+}
+.tbl_frm th.row{
+    border: 1px solid #808080;
+}
+
+.tbl_frm td {
+    font-size: 12px;
+}
+
+.tbl_frm .frm_input {
+    height: 29px;
+    background-color: #fff;
+}
+.tbl_frm textarea,
+.tbl_frm .frm_input {
+    border: 1px solid #e4eaec;
+    background: #f7f7f7;
+    color: #000;
+    vertical-align: middle;
+    line-height: 2em;
+}
+.tbl_frm td {
+    padding: 7px 10px;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    background: transparent;
+}
+.check_agree {
+    text-align: center;
+    font-size: 14px;
+}
+.check_agree a{
+    color:#0054a6;
+}
+#captcha #captcha_key {
+    margin: 0 0 0 33px;
+    padding: 0 5px;
+    width: 70px;
+    height: 60px;
+    border: 1px solid #b8c9c2;
+    background: #f7f7f7;
+    font-size: 1.333em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.8em;
+    vertical-align: top;
+}
+/*注册条*/
+.btn_confirm {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.btn_confirm .btn_submit {
+    border:0px;
+    width: 152px;
+    text-align: center;
+    padding: 10px;
+    background: #193c96;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+.btn_cancel {
+    background: #697287;
+    color: #fff;
+    padding: 10px;
+    width: 66px;
+    text-align: center;
+    font-size: 12px;
+}
+.footslider {
+    width: 895px;
+    margin: 0px auto;
+}
+.top10content{
+    border: 1px solid #ddd;
+    position: relative;
+}
+.top10content  .t1 {
+    position: absolute;
+    top: 44%;
+    left: 25px;
+    z-index: 999;
+}
+.top10content .t2 {
+    position: absolute;
+    top: 44%;
+    right: 25px;
+}
+
+.cont4_4 ul li{
+    float: left;
+}
+.bottom {
+    width: 100%;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+.bottom_btn_box .t1 {
+    text-align: center;
+    margin: 40px 0 50px;
+}
+
+.bottom_btn_box {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+.bottom_btn_box .t2 {
+    width: 1000px;
+}
+nav{
+    background: #ff67a7;
+    font-family: "Microsoft YaHei UI";
+}
+nav ul, nav li{
+    margin: 0px;
+    padding: 0px;
+}
+nav ul li{
+    float: left;
+    vertical-align: middle;
+    height: 24px;
+    padding: 10px 40px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    line-height:24px;
+    display:inline-block;
+}
+#item-list{
+    font-size: 24px;
+    line-height: 24px;
+    color:#fff;
+    width: 120px;
+    cursor: pointer;
+}
+#c1id-list{
+    display: none;
+    position: absolute;
+    top:44px;
+    left:0px;
+    background: #ff67a7;
+    border:1px solid #ff547d;
+    border-top: 0px;
+    border-right: 0px;
+}
+#c1id-list li{
+    width: 70%;
+    position: relative;
+}
+#c1id-list li::after{
+    float:right;
+    content:'>';
+    display:inline-block;
+    color: #fff;
+}
+#c1id-list .c2id-list{
+    display: none;
+    position: absolute;
+    left: 86%;
+    width: 100%;
+    background: #ff67a7;
+    border:1px solid #ff547d;
+    border-left: 0px;
+    border-top: 0px;
+    top:0px;
+}
+#c1id-list li:hover > ul{
+    display: block;
+}
+.solidtn{
+    border-radius: 3px;
+    background: #ff67a7;
+    padding: 5px 20px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+}
+#shoppingdetail{
+    display: none;
+    position: absolute;
+    border:1px solid #ff67a7;
+    top:40px;
+    left:-70px;
+    background: #fff;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0 0 5px 1px rgba(255, 84, 125, 0.4);
+}
+#shoppingdetail:before{
+    content:'◆';
+    position: absolute;
+    top:-12px;
+    color:#ff67a7;
+    font-size: 60px;
+    left: 40%;
+    text-shadow: 0px -3px 5px rgba(255, 84, 125, 0.4);
+
+}
+#shoppingdetail:after{
+    content:'◆';
+    position: absolute;
+    top:-11px;
+    color:#fff;
+    font-size: 60px;
+    left: 40%;
+
+}
+#shoppingdetail div{
+    font-size:10px;
+    width: 100%;
+    margin: 10px 0;
+}
+#shoppingdetail div:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+#shoppingdetail div span:first-child{
+    float: left;
+    width: 80%;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+#shoppingdetail div span:last-child{
+    float: right;
+    width: 20%;
+}
