@@ -35,6 +35,8 @@ public class FilterChainDefinitionMapBuilder {
 		map.put("/login.jsp", "anon");
 		map.put("/register.jsp", "anon");
 		map.put("/register", "anon");
+		map.put("/index.jsp", "anon");
+		map.put("/welcome.jsp", "anon");
 		
 		map.put("/user/login", "anon");
 		map.put("/user/logout", "logout");
